@@ -1,4 +1,4 @@
-#Implementation using Arrays
+#Implementation using Arrays(Dynamic array)
 #Creation of a stack class
 class Stack:
     def __init__(self):
