@@ -47,3 +47,21 @@ for i in range(n - 1, -1, -1):
 
 print(ans)
 # Output: [False, True, False, True, True]
+
+# --------------------------------
+# CASE 3: MONOTONIC INCREASING STACK 
+# Use case: Find nearest smaller element on the left.
+# --------------------------------
+
+s = [1, 3, 0, 2, 5]
+st = []
+n = len(s)
+ans = [-1] * n
+for i in range(n-1, -1, -1):
+    while st and s[st[-1]] > s[i]:
+        x = st.pop()
+        ans[x] = s[i]
+    st.append(i)
+    
+print(ans)
+#Output: [-1, 1, -1, 0, 2]
