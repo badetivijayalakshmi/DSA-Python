@@ -1,0 +1,36 @@
+# Queue Notes
+
+## What is a Queue?
+FIFO data structure where the first inserted element
+is removed first.
+
+## When to use Queue
+- Order matters
+- Scheduling
+- Level-wise processing
+- Sliding window
+
+## Python Implementation
+Use collections.deque for O(1) operations.
+
+Using collections.deque (BEST)
+from collections import deque
+
+q = deque()
+q.append(10)      # enqueue
+q.popleft()       # dequeue
+
+
+✅ O(1) enqueue & dequeue
+
+## Sliding Window Template
+
+- Used when processing fixed-size subarrays
+- Deque stores indices, not values
+- Front always holds the answer
+- Remove:
+  - expired elements from front
+  - useless elements from back
+
+Time: O(n)
+Space: O(k)
